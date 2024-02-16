@@ -1,0 +1,78 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(to right, #6db9ef, #7ce8d5);
+  }
+  
+  form {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  form label {
+    margin-top: 10px;
+    display: block;
+  }
+  
+  form input[type="text"],
+  form input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #4cae4c;
+  }
+  
+  .social {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .social div {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .social .go {
+    color: #db4437;
+  }
+  
+  .social .fb {
+    color: #4267B2;
+  }
+  

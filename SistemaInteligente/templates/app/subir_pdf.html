@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Resumenes</title>
+    <link rel="stylesheet" href="{% static 'css/subirpdf.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <a class="btn btn-outline-success" href="http://127.0.0.1:8000/">Regresar</a>
+            <form id="dataForm" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                
+                <label for="pdf"></label>
+                <input type="file" id="pdf" name="myfile" accept="application/pdf" class="btn"><br>
+                
+                <input type="submit" value="Obtener resumen" class="btn btn-success"><br>
+            </form>
+        </div>
+        <div class="table-container">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>
+                            <h2>Cargando el PDF</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {% if path %}
+                            <p>Nombre del archivo: <a href="{{ path }}">{{ filename }}</a></p>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>Resumen del PDF</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {% if summary %}
+                            <p>{{ summary }}</p>
+                            {% else %}
+                            <p>No se pudo resumir el texto del PDF.</p>
+                            {% endif %}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
